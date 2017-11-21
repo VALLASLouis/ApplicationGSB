@@ -56,7 +56,18 @@ namespace ApplicationGSB
 
         public void execWrite(String requete)
         {
+            //Instancier la requête
+            maRequete = new SqlCommand();
+            maRequete.CommandText = requete;
+            maRequete.Connection = maConnexion;
 
+            // Formater la requête SQL pour l'executer
+            monDataAdapter = new SqlDataAdapter();
+            monDataAdapter.SelectCommand = maRequete;
+
+
+            // On exécute la requête
+            monDR = maRequete.ExecuteReader();
         }
 
     }
