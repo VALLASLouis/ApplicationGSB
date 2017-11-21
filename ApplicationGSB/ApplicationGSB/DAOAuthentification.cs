@@ -10,9 +10,9 @@ namespace ApplicationGSB
     class DAOAuthentification
     {
        
-        public List<classeAuthentification> getAllCompte ()
+        public List<c_Authentification> getAllCompte ()
         {
-            List<classeAuthentification> resultat = new List<classeAuthentification>();
+            List<c_Authentification> resultat = new List<c_Authentification>();
             try
             {
                 DAOFactory DAOA = new DAOFactory();
@@ -21,7 +21,7 @@ namespace ApplicationGSB
                 SqlDataReader DR = DAOA.execRead(requete);
                 while (DR.Read())
                 {
-                    resultat.Add(new classeAuthentification(DR.GetString(1), DR.GetString(2)));
+                    resultat.Add(new c_Authentification(DR.GetString(1), DR.GetString(2)));
                 }
                 DAOA.deconnexion();
                 return resultat;
