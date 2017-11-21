@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationGSB
 {
-    class classeAuthentification
+    class c_Authentification
     {
         #region Propriété
         private String login;
@@ -44,10 +44,12 @@ namespace ApplicationGSB
         }
         #endregion
 
-        public classeAuthentification(String unLogin, String unPassword)
+        public c_Authentification(String unLogin, String unPassword)
         {
             login = unLogin;
             password = unPassword;
         }
+
+
     }
 }
