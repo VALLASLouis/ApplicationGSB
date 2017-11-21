@@ -73,6 +73,7 @@
             this.lblSpecialite = new System.Windows.Forms.Label();
             this.cbxSpecialite = new System.Windows.Forms.ComboBox();
             this.tabVisiteursMedicaux = new System.Windows.Forms.TabPage();
+            this.btnNewVisiteur = new System.Windows.Forms.Button();
             this.dgvVisiteurMedical = new System.Windows.Forms.DataGridView();
             this.dgvNomVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCodeVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +86,6 @@
             this.lblCodeVisiteur = new System.Windows.Forms.Label();
             this.lblNomVisiteur = new System.Windows.Forms.Label();
             this.lblSecteurMedical = new System.Windows.Forms.Label();
-            this.btnNewVisiteur = new System.Windows.Forms.Button();
             this.tabApplication.SuspendLayout();
             this.tabMedicament.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicaments)).BeginInit();
@@ -486,6 +486,15 @@
             this.tabVisiteursMedicaux.Text = "Visiteurs médicaux";
             this.tabVisiteursMedicaux.UseVisualStyleBackColor = true;
             // 
+            // btnNewVisiteur
+            // 
+            this.btnNewVisiteur.Location = new System.Drawing.Point(680, 38);
+            this.btnNewVisiteur.Name = "btnNewVisiteur";
+            this.btnNewVisiteur.Size = new System.Drawing.Size(120, 36);
+            this.btnNewVisiteur.TabIndex = 7;
+            this.btnNewVisiteur.Text = "Nouveau";
+            this.btnNewVisiteur.UseVisualStyleBackColor = true;
+            // 
             // dgvVisiteurMedical
             // 
             this.dgvVisiteurMedical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -574,15 +583,6 @@
             this.lblSecteurMedical.Size = new System.Drawing.Size(89, 13);
             this.lblSecteurMedical.TabIndex = 0;
             this.lblSecteurMedical.Text = "Secteur médical :";
-            // 
-            // btnNewVisiteur
-            // 
-            this.btnNewVisiteur.Location = new System.Drawing.Point(680, 38);
-            this.btnNewVisiteur.Name = "btnNewVisiteur";
-            this.btnNewVisiteur.Size = new System.Drawing.Size(120, 36);
-            this.btnNewVisiteur.TabIndex = 7;
-            this.btnNewVisiteur.Text = "Nouveau";
-            this.btnNewVisiteur.UseVisualStyleBackColor = true;
             // 
             // frm_Application
             // 
