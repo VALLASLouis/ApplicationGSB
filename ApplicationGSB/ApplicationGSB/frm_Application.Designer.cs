@@ -30,7 +30,24 @@
         {
             this.tabApplication = new System.Windows.Forms.TabControl();
             this.tabMedicament = new System.Windows.Forms.TabPage();
+            this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
+            this.btnCreer = new System.Windows.Forms.Button();
+            this.lblPresentation = new System.Windows.Forms.Label();
+            this.lblPxEchantillon = new System.Windows.Forms.Label();
+            this.lblPxHT = new System.Windows.Forms.Label();
+            this.lblFamille = new System.Windows.Forms.Label();
+            this.txtbPxEchantillon = new System.Windows.Forms.TextBox();
+            this.txtbPresentation = new System.Windows.Forms.TextBox();
+            this.txtbFamille = new System.Windows.Forms.TextBox();
+            this.txtbPxVenteHT = new System.Windows.Forms.TextBox();
+            this.txtbContreInd = new System.Windows.Forms.TextBox();
+            this.txtbDosage = new System.Windows.Forms.TextBox();
+            this.txtbEffetsTherapeu = new System.Windows.Forms.TextBox();
+            this.txtbNumProduit = new System.Windows.Forms.TextBox();
             this.dgvMedicaments = new System.Windows.Forms.DataGridView();
+            this.dgvInteractionMedicament = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvInstruction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDosage = new System.Windows.Forms.Label();
             this.lblContreInd = new System.Windows.Forms.Label();
             this.lblEffetThera = new System.Windows.Forms.Label();
@@ -38,36 +55,7 @@
             this.lblMedicaments = new System.Windows.Forms.Label();
             this.cbxMedicaments = new System.Windows.Forms.ComboBox();
             this.tabPraticiens = new System.Windows.Forms.TabPage();
-            this.tabVisiteursMedicaux = new System.Windows.Forms.TabPage();
-            this.txtbNumProduit = new System.Windows.Forms.TextBox();
-            this.txtbEffetsTherapeu = new System.Windows.Forms.TextBox();
-            this.txtbDosage = new System.Windows.Forms.TextBox();
-            this.txtbContreInd = new System.Windows.Forms.TextBox();
-            this.txtbPxVenteHT = new System.Windows.Forms.TextBox();
-            this.txtbFamille = new System.Windows.Forms.TextBox();
-            this.txtbPresentation = new System.Windows.Forms.TextBox();
-            this.txtbPxEchantillon = new System.Windows.Forms.TextBox();
-            this.lblFamille = new System.Windows.Forms.Label();
-            this.lblPxHT = new System.Windows.Forms.Label();
-            this.lblPxEchantillon = new System.Windows.Forms.Label();
-            this.lblPresentation = new System.Windows.Forms.Label();
-            this.btnCreer = new System.Windows.Forms.Button();
-            this.btnModifier = new System.Windows.Forms.Button();
-            this.btnSupprimer = new System.Windows.Forms.Button();
-            this.cbxSpecialite = new System.Windows.Forms.ComboBox();
-            this.lblSpecialite = new System.Windows.Forms.Label();
-            this.lblNom = new System.Windows.Forms.Label();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.txtbNomPraticien = new System.Windows.Forms.TextBox();
-            this.txtbCodePraticien = new System.Windows.Forms.TextBox();
             this.dgvPraticiens = new System.Windows.Forms.DataGridView();
-            this.lblSecteurMedical = new System.Windows.Forms.Label();
-            this.lblNomVisiteur = new System.Windows.Forms.Label();
-            this.lblCodeVisiteur = new System.Windows.Forms.Label();
-            this.cmbxSecteurMedical = new System.Windows.Forms.ComboBox();
-            this.txtbNomVisiteur = new System.Windows.Forms.TextBox();
-            this.txtbCodeVisiteur = new System.Windows.Forms.TextBox();
-            this.dgvVisiteurMedical = new System.Windows.Forms.DataGridView();
             this.dgvCodePraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAdressePraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,19 +66,32 @@
             this.dgvClientPraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCoefConfiancePraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCoefNotorietePraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtbCodePraticien = new System.Windows.Forms.TextBox();
+            this.txtbNomPraticien = new System.Windows.Forms.TextBox();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblSpecialite = new System.Windows.Forms.Label();
+            this.cbxSpecialite = new System.Windows.Forms.ComboBox();
+            this.tabVisiteursMedicaux = new System.Windows.Forms.TabPage();
+            this.dgvVisiteurMedical = new System.Windows.Forms.DataGridView();
             this.dgvNomVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCodeVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCPVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvVilleVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDateNaissanceVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvInteractionMedicament = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvInstruction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtbCodeVisiteur = new System.Windows.Forms.TextBox();
+            this.txtbNomVisiteur = new System.Windows.Forms.TextBox();
+            this.cmbxSecteurMedical = new System.Windows.Forms.ComboBox();
+            this.lblCodeVisiteur = new System.Windows.Forms.Label();
+            this.lblNomVisiteur = new System.Windows.Forms.Label();
+            this.lblSecteurMedical = new System.Windows.Forms.Label();
+            this.btnNewVisiteur = new System.Windows.Forms.Button();
             this.tabApplication.SuspendLayout();
             this.tabMedicament.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicaments)).BeginInit();
             this.tabPraticiens.SuspendLayout();
-            this.tabVisiteursMedicaux.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPraticiens)).BeginInit();
+            this.tabVisiteursMedicaux.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurMedical)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,6 +138,125 @@
             this.tabMedicament.Text = "Médicaments";
             this.tabMedicament.UseVisualStyleBackColor = true;
             // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Location = new System.Drawing.Point(610, 151);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(142, 23);
+            this.btnSupprimer.TabIndex = 21;
+            this.btnSupprimer.Text = "Supprimer";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.Location = new System.Drawing.Point(610, 112);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(142, 23);
+            this.btnModifier.TabIndex = 20;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = true;
+            // 
+            // btnCreer
+            // 
+            this.btnCreer.Location = new System.Drawing.Point(610, 73);
+            this.btnCreer.Name = "btnCreer";
+            this.btnCreer.Size = new System.Drawing.Size(142, 23);
+            this.btnCreer.TabIndex = 19;
+            this.btnCreer.Text = "Créer";
+            this.btnCreer.UseVisualStyleBackColor = true;
+            // 
+            // lblPresentation
+            // 
+            this.lblPresentation.AutoSize = true;
+            this.lblPresentation.Location = new System.Drawing.Point(586, 20);
+            this.lblPresentation.Name = "lblPresentation";
+            this.lblPresentation.Size = new System.Drawing.Size(72, 13);
+            this.lblPresentation.TabIndex = 18;
+            this.lblPresentation.Text = "Présentation :";
+            // 
+            // lblPxEchantillon
+            // 
+            this.lblPxEchantillon.AutoSize = true;
+            this.lblPxEchantillon.Location = new System.Drawing.Point(309, 138);
+            this.lblPxEchantillon.Name = "lblPxEchantillon";
+            this.lblPxEchantillon.Size = new System.Drawing.Size(97, 13);
+            this.lblPxEchantillon.TabIndex = 17;
+            this.lblPxEchantillon.Text = "Prix de l\'échantillon";
+            // 
+            // lblPxHT
+            // 
+            this.lblPxHT.AutoSize = true;
+            this.lblPxHT.Location = new System.Drawing.Point(309, 99);
+            this.lblPxHT.Name = "lblPxHT";
+            this.lblPxHT.Size = new System.Drawing.Size(93, 13);
+            this.lblPxHT.TabIndex = 16;
+            this.lblPxHT.Text = "Prix de vente HT :";
+            // 
+            // lblFamille
+            // 
+            this.lblFamille.AutoSize = true;
+            this.lblFamille.Location = new System.Drawing.Point(309, 60);
+            this.lblFamille.Name = "lblFamille";
+            this.lblFamille.Size = new System.Drawing.Size(45, 13);
+            this.lblFamille.TabIndex = 15;
+            this.lblFamille.Text = "Famille :";
+            // 
+            // txtbPxEchantillon
+            // 
+            this.txtbPxEchantillon.Location = new System.Drawing.Point(335, 154);
+            this.txtbPxEchantillon.Name = "txtbPxEchantillon";
+            this.txtbPxEchantillon.Size = new System.Drawing.Size(171, 20);
+            this.txtbPxEchantillon.TabIndex = 14;
+            // 
+            // txtbPresentation
+            // 
+            this.txtbPresentation.Location = new System.Drawing.Point(610, 37);
+            this.txtbPresentation.Name = "txtbPresentation";
+            this.txtbPresentation.Size = new System.Drawing.Size(142, 20);
+            this.txtbPresentation.TabIndex = 13;
+            // 
+            // txtbFamille
+            // 
+            this.txtbFamille.Location = new System.Drawing.Point(335, 76);
+            this.txtbFamille.Name = "txtbFamille";
+            this.txtbFamille.Size = new System.Drawing.Size(171, 20);
+            this.txtbFamille.TabIndex = 12;
+            // 
+            // txtbPxVenteHT
+            // 
+            this.txtbPxVenteHT.Location = new System.Drawing.Point(335, 115);
+            this.txtbPxVenteHT.Name = "txtbPxVenteHT";
+            this.txtbPxVenteHT.Size = new System.Drawing.Size(171, 20);
+            this.txtbPxVenteHT.TabIndex = 11;
+            // 
+            // txtbContreInd
+            // 
+            this.txtbContreInd.Location = new System.Drawing.Point(49, 154);
+            this.txtbContreInd.Name = "txtbContreInd";
+            this.txtbContreInd.Size = new System.Drawing.Size(182, 20);
+            this.txtbContreInd.TabIndex = 10;
+            // 
+            // txtbDosage
+            // 
+            this.txtbDosage.Location = new System.Drawing.Point(335, 37);
+            this.txtbDosage.Name = "txtbDosage";
+            this.txtbDosage.Size = new System.Drawing.Size(171, 20);
+            this.txtbDosage.TabIndex = 9;
+            // 
+            // txtbEffetsTherapeu
+            // 
+            this.txtbEffetsTherapeu.Location = new System.Drawing.Point(49, 115);
+            this.txtbEffetsTherapeu.Name = "txtbEffetsTherapeu";
+            this.txtbEffetsTherapeu.Size = new System.Drawing.Size(182, 20);
+            this.txtbEffetsTherapeu.TabIndex = 8;
+            // 
+            // txtbNumProduit
+            // 
+            this.txtbNumProduit.Location = new System.Drawing.Point(49, 76);
+            this.txtbNumProduit.Name = "txtbNumProduit";
+            this.txtbNumProduit.Size = new System.Drawing.Size(182, 20);
+            this.txtbNumProduit.TabIndex = 7;
+            // 
             // dgvMedicaments
             // 
             this.dgvMedicaments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -148,6 +268,16 @@
             this.dgvMedicaments.Name = "dgvMedicaments";
             this.dgvMedicaments.Size = new System.Drawing.Size(879, 204);
             this.dgvMedicaments.TabIndex = 6;
+            // 
+            // dgvInteractionMedicament
+            // 
+            this.dgvInteractionMedicament.HeaderText = "Interactions avec les autres médicaments";
+            this.dgvInteractionMedicament.Name = "dgvInteractionMedicament";
+            // 
+            // dgvInstruction
+            // 
+            this.dgvInstruction.HeaderText = "Instructions";
+            this.dgvInstruction.Name = "dgvInstruction";
             // 
             // lblDosage
             // 
@@ -219,191 +349,6 @@
             this.tabPraticiens.Text = "Praticiens";
             this.tabPraticiens.UseVisualStyleBackColor = true;
             // 
-            // tabVisiteursMedicaux
-            // 
-            this.tabVisiteursMedicaux.Controls.Add(this.dgvVisiteurMedical);
-            this.tabVisiteursMedicaux.Controls.Add(this.txtbCodeVisiteur);
-            this.tabVisiteursMedicaux.Controls.Add(this.txtbNomVisiteur);
-            this.tabVisiteursMedicaux.Controls.Add(this.cmbxSecteurMedical);
-            this.tabVisiteursMedicaux.Controls.Add(this.lblCodeVisiteur);
-            this.tabVisiteursMedicaux.Controls.Add(this.lblNomVisiteur);
-            this.tabVisiteursMedicaux.Controls.Add(this.lblSecteurMedical);
-            this.tabVisiteursMedicaux.Location = new System.Drawing.Point(4, 22);
-            this.tabVisiteursMedicaux.Name = "tabVisiteursMedicaux";
-            this.tabVisiteursMedicaux.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVisiteursMedicaux.Size = new System.Drawing.Size(896, 426);
-            this.tabVisiteursMedicaux.TabIndex = 2;
-            this.tabVisiteursMedicaux.Text = "Visiteurs médicaux";
-            this.tabVisiteursMedicaux.UseVisualStyleBackColor = true;
-            // 
-            // txtbNumProduit
-            // 
-            this.txtbNumProduit.Location = new System.Drawing.Point(49, 76);
-            this.txtbNumProduit.Name = "txtbNumProduit";
-            this.txtbNumProduit.Size = new System.Drawing.Size(182, 20);
-            this.txtbNumProduit.TabIndex = 7;
-            // 
-            // txtbEffetsTherapeu
-            // 
-            this.txtbEffetsTherapeu.Location = new System.Drawing.Point(49, 115);
-            this.txtbEffetsTherapeu.Name = "txtbEffetsTherapeu";
-            this.txtbEffetsTherapeu.Size = new System.Drawing.Size(182, 20);
-            this.txtbEffetsTherapeu.TabIndex = 8;
-            // 
-            // txtbDosage
-            // 
-            this.txtbDosage.Location = new System.Drawing.Point(335, 37);
-            this.txtbDosage.Name = "txtbDosage";
-            this.txtbDosage.Size = new System.Drawing.Size(171, 20);
-            this.txtbDosage.TabIndex = 9;
-            // 
-            // txtbContreInd
-            // 
-            this.txtbContreInd.Location = new System.Drawing.Point(49, 154);
-            this.txtbContreInd.Name = "txtbContreInd";
-            this.txtbContreInd.Size = new System.Drawing.Size(182, 20);
-            this.txtbContreInd.TabIndex = 10;
-            // 
-            // txtbPxVenteHT
-            // 
-            this.txtbPxVenteHT.Location = new System.Drawing.Point(335, 115);
-            this.txtbPxVenteHT.Name = "txtbPxVenteHT";
-            this.txtbPxVenteHT.Size = new System.Drawing.Size(171, 20);
-            this.txtbPxVenteHT.TabIndex = 11;
-            // 
-            // txtbFamille
-            // 
-            this.txtbFamille.Location = new System.Drawing.Point(335, 76);
-            this.txtbFamille.Name = "txtbFamille";
-            this.txtbFamille.Size = new System.Drawing.Size(171, 20);
-            this.txtbFamille.TabIndex = 12;
-            // 
-            // txtbPresentation
-            // 
-            this.txtbPresentation.Location = new System.Drawing.Point(610, 37);
-            this.txtbPresentation.Name = "txtbPresentation";
-            this.txtbPresentation.Size = new System.Drawing.Size(142, 20);
-            this.txtbPresentation.TabIndex = 13;
-            // 
-            // txtbPxEchantillon
-            // 
-            this.txtbPxEchantillon.Location = new System.Drawing.Point(335, 154);
-            this.txtbPxEchantillon.Name = "txtbPxEchantillon";
-            this.txtbPxEchantillon.Size = new System.Drawing.Size(171, 20);
-            this.txtbPxEchantillon.TabIndex = 14;
-            // 
-            // lblFamille
-            // 
-            this.lblFamille.AutoSize = true;
-            this.lblFamille.Location = new System.Drawing.Point(309, 60);
-            this.lblFamille.Name = "lblFamille";
-            this.lblFamille.Size = new System.Drawing.Size(45, 13);
-            this.lblFamille.TabIndex = 15;
-            this.lblFamille.Text = "Famille :";
-            // 
-            // lblPxHT
-            // 
-            this.lblPxHT.AutoSize = true;
-            this.lblPxHT.Location = new System.Drawing.Point(309, 99);
-            this.lblPxHT.Name = "lblPxHT";
-            this.lblPxHT.Size = new System.Drawing.Size(93, 13);
-            this.lblPxHT.TabIndex = 16;
-            this.lblPxHT.Text = "Prix de vente HT :";
-            // 
-            // lblPxEchantillon
-            // 
-            this.lblPxEchantillon.AutoSize = true;
-            this.lblPxEchantillon.Location = new System.Drawing.Point(309, 138);
-            this.lblPxEchantillon.Name = "lblPxEchantillon";
-            this.lblPxEchantillon.Size = new System.Drawing.Size(97, 13);
-            this.lblPxEchantillon.TabIndex = 17;
-            this.lblPxEchantillon.Text = "Prix de l\'échantillon";
-            // 
-            // lblPresentation
-            // 
-            this.lblPresentation.AutoSize = true;
-            this.lblPresentation.Location = new System.Drawing.Point(586, 20);
-            this.lblPresentation.Name = "lblPresentation";
-            this.lblPresentation.Size = new System.Drawing.Size(72, 13);
-            this.lblPresentation.TabIndex = 18;
-            this.lblPresentation.Text = "Présentation :";
-            // 
-            // btnCreer
-            // 
-            this.btnCreer.Location = new System.Drawing.Point(610, 73);
-            this.btnCreer.Name = "btnCreer";
-            this.btnCreer.Size = new System.Drawing.Size(142, 23);
-            this.btnCreer.TabIndex = 19;
-            this.btnCreer.Text = "Créer";
-            this.btnCreer.UseVisualStyleBackColor = true;
-            // 
-            // btnModifier
-            // 
-            this.btnModifier.Location = new System.Drawing.Point(610, 112);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(142, 23);
-            this.btnModifier.TabIndex = 20;
-            this.btnModifier.Text = "Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            // 
-            // btnSupprimer
-            // 
-            this.btnSupprimer.Location = new System.Drawing.Point(610, 151);
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(142, 23);
-            this.btnSupprimer.TabIndex = 21;
-            this.btnSupprimer.Text = "Supprimer";
-            this.btnSupprimer.UseVisualStyleBackColor = true;
-            // 
-            // cbxSpecialite
-            // 
-            this.cbxSpecialite.FormattingEnabled = true;
-            this.cbxSpecialite.Location = new System.Drawing.Point(173, 68);
-            this.cbxSpecialite.Name = "cbxSpecialite";
-            this.cbxSpecialite.Size = new System.Drawing.Size(176, 21);
-            this.cbxSpecialite.TabIndex = 0;
-            // 
-            // lblSpecialite
-            // 
-            this.lblSpecialite.AutoSize = true;
-            this.lblSpecialite.Location = new System.Drawing.Point(142, 52);
-            this.lblSpecialite.Name = "lblSpecialite";
-            this.lblSpecialite.Size = new System.Drawing.Size(59, 13);
-            this.lblSpecialite.TabIndex = 1;
-            this.lblSpecialite.Text = "Spécialité :";
-            // 
-            // lblNom
-            // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(442, 28);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(35, 13);
-            this.lblNom.TabIndex = 2;
-            this.lblNom.Text = "Nom :";
-            // 
-            // lblCode
-            // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(442, 76);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(38, 13);
-            this.lblCode.TabIndex = 3;
-            this.lblCode.Text = "Code :";
-            // 
-            // txtbNomPraticien
-            // 
-            this.txtbNomPraticien.Location = new System.Drawing.Point(467, 44);
-            this.txtbNomPraticien.Name = "txtbNomPraticien";
-            this.txtbNomPraticien.Size = new System.Drawing.Size(161, 20);
-            this.txtbNomPraticien.TabIndex = 4;
-            // 
-            // txtbCodePraticien
-            // 
-            this.txtbCodePraticien.Location = new System.Drawing.Point(467, 92);
-            this.txtbCodePraticien.Name = "txtbCodePraticien";
-            this.txtbCodePraticien.Size = new System.Drawing.Size(161, 20);
-            this.txtbCodePraticien.TabIndex = 5;
-            // 
             // dgvPraticiens
             // 
             this.dgvPraticiens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -423,70 +368,6 @@
             this.dgvPraticiens.Name = "dgvPraticiens";
             this.dgvPraticiens.Size = new System.Drawing.Size(879, 258);
             this.dgvPraticiens.TabIndex = 6;
-            // 
-            // lblSecteurMedical
-            // 
-            this.lblSecteurMedical.AutoSize = true;
-            this.lblSecteurMedical.Location = new System.Drawing.Point(130, 78);
-            this.lblSecteurMedical.Name = "lblSecteurMedical";
-            this.lblSecteurMedical.Size = new System.Drawing.Size(89, 13);
-            this.lblSecteurMedical.TabIndex = 0;
-            this.lblSecteurMedical.Text = "Secteur médical :";
-            // 
-            // lblNomVisiteur
-            // 
-            this.lblNomVisiteur.AutoSize = true;
-            this.lblNomVisiteur.Location = new System.Drawing.Point(478, 31);
-            this.lblNomVisiteur.Name = "lblNomVisiteur";
-            this.lblNomVisiteur.Size = new System.Drawing.Size(35, 13);
-            this.lblNomVisiteur.TabIndex = 1;
-            this.lblNomVisiteur.Text = "Nom :";
-            // 
-            // lblCodeVisiteur
-            // 
-            this.lblCodeVisiteur.AutoSize = true;
-            this.lblCodeVisiteur.Location = new System.Drawing.Point(478, 78);
-            this.lblCodeVisiteur.Name = "lblCodeVisiteur";
-            this.lblCodeVisiteur.Size = new System.Drawing.Size(38, 13);
-            this.lblCodeVisiteur.TabIndex = 2;
-            this.lblCodeVisiteur.Text = "Code :";
-            // 
-            // cmbxSecteurMedical
-            // 
-            this.cmbxSecteurMedical.FormattingEnabled = true;
-            this.cmbxSecteurMedical.Location = new System.Drawing.Point(179, 94);
-            this.cmbxSecteurMedical.Name = "cmbxSecteurMedical";
-            this.cmbxSecteurMedical.Size = new System.Drawing.Size(175, 21);
-            this.cmbxSecteurMedical.TabIndex = 3;
-            // 
-            // txtbNomVisiteur
-            // 
-            this.txtbNomVisiteur.Location = new System.Drawing.Point(494, 47);
-            this.txtbNomVisiteur.Name = "txtbNomVisiteur";
-            this.txtbNomVisiteur.Size = new System.Drawing.Size(100, 20);
-            this.txtbNomVisiteur.TabIndex = 4;
-            // 
-            // txtbCodeVisiteur
-            // 
-            this.txtbCodeVisiteur.Location = new System.Drawing.Point(494, 95);
-            this.txtbCodeVisiteur.Name = "txtbCodeVisiteur";
-            this.txtbCodeVisiteur.Size = new System.Drawing.Size(100, 20);
-            this.txtbCodeVisiteur.TabIndex = 5;
-            // 
-            // dgvVisiteurMedical
-            // 
-            this.dgvVisiteurMedical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVisiteurMedical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisiteurMedical.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvNomVisiteur,
-            this.dgvCodeVisiteur,
-            this.dgvCPVisiteur,
-            this.dgvVilleVisiteur,
-            this.dgvDateNaissanceVisiteur});
-            this.dgvVisiteurMedical.Location = new System.Drawing.Point(8, 164);
-            this.dgvVisiteurMedical.Name = "dgvVisiteurMedical";
-            this.dgvVisiteurMedical.Size = new System.Drawing.Size(882, 252);
-            this.dgvVisiteurMedical.TabIndex = 6;
             // 
             // dgvCodePraticien
             // 
@@ -538,6 +419,88 @@
             this.dgvCoefNotorietePraticien.HeaderText = "Coef. Notoriete";
             this.dgvCoefNotorietePraticien.Name = "dgvCoefNotorietePraticien";
             // 
+            // txtbCodePraticien
+            // 
+            this.txtbCodePraticien.Location = new System.Drawing.Point(467, 92);
+            this.txtbCodePraticien.Name = "txtbCodePraticien";
+            this.txtbCodePraticien.Size = new System.Drawing.Size(161, 20);
+            this.txtbCodePraticien.TabIndex = 5;
+            // 
+            // txtbNomPraticien
+            // 
+            this.txtbNomPraticien.Location = new System.Drawing.Point(467, 44);
+            this.txtbNomPraticien.Name = "txtbNomPraticien";
+            this.txtbNomPraticien.Size = new System.Drawing.Size(161, 20);
+            this.txtbNomPraticien.TabIndex = 4;
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Location = new System.Drawing.Point(442, 76);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(38, 13);
+            this.lblCode.TabIndex = 3;
+            this.lblCode.Text = "Code :";
+            // 
+            // lblNom
+            // 
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(442, 28);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(35, 13);
+            this.lblNom.TabIndex = 2;
+            this.lblNom.Text = "Nom :";
+            // 
+            // lblSpecialite
+            // 
+            this.lblSpecialite.AutoSize = true;
+            this.lblSpecialite.Location = new System.Drawing.Point(142, 52);
+            this.lblSpecialite.Name = "lblSpecialite";
+            this.lblSpecialite.Size = new System.Drawing.Size(59, 13);
+            this.lblSpecialite.TabIndex = 1;
+            this.lblSpecialite.Text = "Spécialité :";
+            // 
+            // cbxSpecialite
+            // 
+            this.cbxSpecialite.FormattingEnabled = true;
+            this.cbxSpecialite.Location = new System.Drawing.Point(173, 68);
+            this.cbxSpecialite.Name = "cbxSpecialite";
+            this.cbxSpecialite.Size = new System.Drawing.Size(176, 21);
+            this.cbxSpecialite.TabIndex = 0;
+            // 
+            // tabVisiteursMedicaux
+            // 
+            this.tabVisiteursMedicaux.Controls.Add(this.btnNewVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.dgvVisiteurMedical);
+            this.tabVisiteursMedicaux.Controls.Add(this.txtbCodeVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.txtbNomVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.cmbxSecteurMedical);
+            this.tabVisiteursMedicaux.Controls.Add(this.lblCodeVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.lblNomVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.lblSecteurMedical);
+            this.tabVisiteursMedicaux.Location = new System.Drawing.Point(4, 22);
+            this.tabVisiteursMedicaux.Name = "tabVisiteursMedicaux";
+            this.tabVisiteursMedicaux.Padding = new System.Windows.Forms.Padding(3);
+            this.tabVisiteursMedicaux.Size = new System.Drawing.Size(896, 426);
+            this.tabVisiteursMedicaux.TabIndex = 2;
+            this.tabVisiteursMedicaux.Text = "Visiteurs médicaux";
+            this.tabVisiteursMedicaux.UseVisualStyleBackColor = true;
+            // 
+            // dgvVisiteurMedical
+            // 
+            this.dgvVisiteurMedical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVisiteurMedical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisiteurMedical.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNomVisiteur,
+            this.dgvCodeVisiteur,
+            this.dgvCPVisiteur,
+            this.dgvVilleVisiteur,
+            this.dgvDateNaissanceVisiteur});
+            this.dgvVisiteurMedical.Location = new System.Drawing.Point(8, 164);
+            this.dgvVisiteurMedical.Name = "dgvVisiteurMedical";
+            this.dgvVisiteurMedical.Size = new System.Drawing.Size(882, 252);
+            this.dgvVisiteurMedical.TabIndex = 6;
+            // 
             // dgvNomVisiteur
             // 
             this.dgvNomVisiteur.HeaderText = "Nom";
@@ -563,15 +526,63 @@
             this.dgvDateNaissanceVisiteur.HeaderText = "Date naissance";
             this.dgvDateNaissanceVisiteur.Name = "dgvDateNaissanceVisiteur";
             // 
-            // dgvInteractionMedicament
+            // txtbCodeVisiteur
             // 
-            this.dgvInteractionMedicament.HeaderText = "Interactions avec les autres médicaments";
-            this.dgvInteractionMedicament.Name = "dgvInteractionMedicament";
+            this.txtbCodeVisiteur.Location = new System.Drawing.Point(494, 95);
+            this.txtbCodeVisiteur.Name = "txtbCodeVisiteur";
+            this.txtbCodeVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.txtbCodeVisiteur.TabIndex = 5;
             // 
-            // dgvInstruction
+            // txtbNomVisiteur
             // 
-            this.dgvInstruction.HeaderText = "Instructions";
-            this.dgvInstruction.Name = "dgvInstruction";
+            this.txtbNomVisiteur.Location = new System.Drawing.Point(494, 47);
+            this.txtbNomVisiteur.Name = "txtbNomVisiteur";
+            this.txtbNomVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.txtbNomVisiteur.TabIndex = 4;
+            // 
+            // cmbxSecteurMedical
+            // 
+            this.cmbxSecteurMedical.FormattingEnabled = true;
+            this.cmbxSecteurMedical.Location = new System.Drawing.Point(179, 94);
+            this.cmbxSecteurMedical.Name = "cmbxSecteurMedical";
+            this.cmbxSecteurMedical.Size = new System.Drawing.Size(175, 21);
+            this.cmbxSecteurMedical.TabIndex = 3;
+            // 
+            // lblCodeVisiteur
+            // 
+            this.lblCodeVisiteur.AutoSize = true;
+            this.lblCodeVisiteur.Location = new System.Drawing.Point(478, 78);
+            this.lblCodeVisiteur.Name = "lblCodeVisiteur";
+            this.lblCodeVisiteur.Size = new System.Drawing.Size(38, 13);
+            this.lblCodeVisiteur.TabIndex = 2;
+            this.lblCodeVisiteur.Text = "Code :";
+            // 
+            // lblNomVisiteur
+            // 
+            this.lblNomVisiteur.AutoSize = true;
+            this.lblNomVisiteur.Location = new System.Drawing.Point(478, 31);
+            this.lblNomVisiteur.Name = "lblNomVisiteur";
+            this.lblNomVisiteur.Size = new System.Drawing.Size(35, 13);
+            this.lblNomVisiteur.TabIndex = 1;
+            this.lblNomVisiteur.Text = "Nom :";
+            // 
+            // lblSecteurMedical
+            // 
+            this.lblSecteurMedical.AutoSize = true;
+            this.lblSecteurMedical.Location = new System.Drawing.Point(130, 78);
+            this.lblSecteurMedical.Name = "lblSecteurMedical";
+            this.lblSecteurMedical.Size = new System.Drawing.Size(89, 13);
+            this.lblSecteurMedical.TabIndex = 0;
+            this.lblSecteurMedical.Text = "Secteur médical :";
+            // 
+            // btnNewVisiteur
+            // 
+            this.btnNewVisiteur.Location = new System.Drawing.Point(680, 38);
+            this.btnNewVisiteur.Name = "btnNewVisiteur";
+            this.btnNewVisiteur.Size = new System.Drawing.Size(120, 36);
+            this.btnNewVisiteur.TabIndex = 7;
+            this.btnNewVisiteur.Text = "Nouveau";
+            this.btnNewVisiteur.UseVisualStyleBackColor = true;
             // 
             // frm_Application
             // 
@@ -587,9 +598,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicaments)).EndInit();
             this.tabPraticiens.ResumeLayout(false);
             this.tabPraticiens.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPraticiens)).EndInit();
             this.tabVisiteursMedicaux.ResumeLayout(false);
             this.tabVisiteursMedicaux.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPraticiens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurMedical)).EndInit();
             this.ResumeLayout(false);
 
@@ -654,5 +665,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDateNaissanceVisiteur;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvInteractionMedicament;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvInstruction;
+        private System.Windows.Forms.Button btnNewVisiteur;
     }
 }
