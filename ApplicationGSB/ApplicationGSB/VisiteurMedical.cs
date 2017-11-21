@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationGSB
 {
-    class classeVisiteursMedicaux
+    class VisiteurMedical
     {
         #region Propriétés
         private String nomVisiteurs;
@@ -68,4 +68,5 @@ namespace ApplicationGSB
         }
         #endregion
     }
+}
 }

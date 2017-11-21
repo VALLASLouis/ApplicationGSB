@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationGSB
 {
-    class classePraticiens
+    class Praticien
     {
         #region Propriétés
         private String codePraticien;
