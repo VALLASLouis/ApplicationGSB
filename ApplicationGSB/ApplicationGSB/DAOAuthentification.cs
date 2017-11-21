@@ -17,18 +17,18 @@ namespace ApplicationGSB
             {
                 DAOFactory DAOA = new DAOFactory();
                 DAOA.connexion();
-                String requete = "select * from authentification;";
+                String requete = "select * from Authentification;";
                 SqlDataReader DR = DAOA.execRead(requete);
-                while (DR.NextResult())
+                while (DR.Read())
                 {
-                    resultat.Add(new classeAuthentification(DR.GetString(0), DR.GetString(1)));
+                    resultat.Add(new classeAuthentification(DR.GetString(1), DR.GetString(2)));
                 }
                 DAOA.deconnexion();
                 return resultat;
             }
-            catch(Exception)
+            catch(Exception e) 
             {
-                return null;
+                throw new Exception("Ne marche pas");
             }
         }
     }

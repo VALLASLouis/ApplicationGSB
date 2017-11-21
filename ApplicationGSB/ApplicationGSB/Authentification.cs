@@ -33,32 +33,41 @@ namespace ApplicationGSB
         #region Fonction
         public Boolean verifCompte (String unLogin, String unPassword)
         {
-            bool montest = false;
-            List<classeAuthentification> lesComptes = new List<classeAuthentification>();
-            lesComptes = DAOA.getAllCompte();
-            for (int i = 0 ; i < lesComptes.Count ; i++)
+            try
             {
-                if (lesComptes[i].Login == unLogin && lesComptes[i].Password == unPassword)
+                bool montest = false;
+                List<classeAuthentification> lesComptes = new List<classeAuthentification>();
+                lesComptes = DAOA.getAllCompte();
+                for (int i = 0; i < lesComptes.Count; i++)
                 {
-                    montest = true;
-                    frmAuthentification formAuth = new frmAuthentification();
-                    formAuth.Hide();
-                    frm_Application formApp = new frm_Application();
-                    formApp.Show();
+                    if (lesComptes[i].Login == unLogin && lesComptes[i].Password == unPassword)
+                    {
+                        montest = true;                      
+                    }
                 }
+                return montest;
             }
-            return montest;
+           catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+            
         }
         #endregion
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            if(verifCompte(txtbLogin.ToString(), txtbPassword.ToString())){
-                lblMsgErreurAuth.Text = "Connexion validé";
+            if(verifCompte(txtbLogin.Text, txtbPassword.Text)){
+                lblMsgErreurAuth.Text = "Connexion validée";
+                frmAuthentification formAuth = new frmAuthentification();
+                formAuth.Hide();
+                frm_Application formApp = new frm_Application();
+                formApp.Show();
             }
             else
             {
-                lblMsgErreurAuth.Text = "Connexion refusé, pour créer un nouveau compte, veuillez vous adressez à l'administrateur.";
+                lblMsgErreurAuth.Text = "Connexion refusée, pour créer un nouveau compte, veuillez vous adressez à l'administrateur.";
             }
         }
     }
