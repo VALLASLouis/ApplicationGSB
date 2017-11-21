@@ -53,9 +53,7 @@
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
     <Compile Include="classeAuthentification.cs" />
-    <Compile Include="classePraticiens.cs" />
     <Compile Include="classeProduit.cs" />
-    <Compile Include="classeVisiteursMedicaux.cs" />
     <Compile Include="DAOAuthentification.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="frm_Application.cs">
@@ -64,8 +62,10 @@
     <Compile Include="frm_Application.Designer.cs">
       <DependentUpon>frm_Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="Praticien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisiteurMedical.cs" />
     <EmbeddedResource Include="Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
