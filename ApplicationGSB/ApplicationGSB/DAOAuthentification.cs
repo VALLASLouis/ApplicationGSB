@@ -9,18 +9,21 @@ namespace ApplicationGSB
 {
     class DAOAuthentification
     {
+       
         public List<classeAuthentification> getAllCompte ()
         {
             List<classeAuthentification> resultat = new List<classeAuthentification>();
             try
             {
-                String requete = "select * from Authentification";
-                DAOFactory db = new DAOFactory();
-                SqlDataReader DR = db.execRead(requete);
+                DAOFactory DAOA = new DAOFactory();
+                DAOA.connexion();
+                String requete = "select * from authentification;";
+                SqlDataReader DR = DAOA.execRead(requete);
                 while (DR.NextResult())
                 {
                     resultat.Add(new classeAuthentification(DR.GetString(0), DR.GetString(1)));
                 }
+                DAOA.deconnexion();
                 return resultat;
             }
             catch(Exception)

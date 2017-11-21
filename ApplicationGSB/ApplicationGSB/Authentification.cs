@@ -36,11 +36,15 @@ namespace ApplicationGSB
             bool montest = false;
             List<classeAuthentification> lesComptes = new List<classeAuthentification>();
             lesComptes = DAOA.getAllCompte();
-            for (int i = 0 ; i < lesComptes.Count() ; i++)
+            for (int i = 0 ; i < lesComptes.Count ; i++)
             {
                 if (lesComptes[i].Login == unLogin && lesComptes[i].Password == unPassword)
                 {
                     montest = true;
+                    frmAuthentification formAuth = new frmAuthentification();
+                    formAuth.Hide();
+                    frm_Application formApp = new frm_Application();
+                    formApp.Show();
                 }
             }
             return montest;
@@ -50,7 +54,11 @@ namespace ApplicationGSB
         private void btnConnexion_Click(object sender, EventArgs e)
         {
             if(verifCompte(txtbLogin.ToString(), txtbPassword.ToString())){
-                //A CONTINUER 
+                lblMsgErreurAuth.Text = "Connexion validé";
+            }
+            else
+            {
+                lblMsgErreurAuth.Text = "Connexion refusé, pour créer un nouveau compte, veuillez vous adressez à l'administrateur.";
             }
         }
     }

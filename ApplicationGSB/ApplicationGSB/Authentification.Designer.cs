@@ -33,6 +33,7 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnConnexion = new System.Windows.Forms.Button();
+            this.lblMsgErreurAuth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtbLogin
@@ -70,7 +71,7 @@
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(178, 205);
+            this.btnConnexion.Location = new System.Drawing.Point(168, 177);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(109, 46);
             this.btnConnexion.TabIndex = 4;
@@ -78,11 +79,21 @@
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
+            // lblMsgErreurAuth
+            // 
+            this.lblMsgErreurAuth.AutoSize = true;
+            this.lblMsgErreurAuth.Location = new System.Drawing.Point(50, 251);
+            this.lblMsgErreurAuth.Name = "lblMsgErreurAuth";
+            this.lblMsgErreurAuth.Size = new System.Drawing.Size(86, 13);
+            this.lblMsgErreurAuth.TabIndex = 5;
+            this.lblMsgErreurAuth.Text = "Label test entrée";
+            // 
             // frmAuthentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 329);
+            this.Controls.Add(this.lblMsgErreurAuth);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblLogin);
@@ -102,6 +113,7 @@
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnConnexion;
+        private System.Windows.Forms.Label lblMsgErreurAuth;
     }
 }
 
