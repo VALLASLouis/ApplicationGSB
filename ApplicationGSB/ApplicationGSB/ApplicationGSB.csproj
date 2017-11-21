@@ -52,8 +52,6 @@
     <Compile Include="Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
-    <Compile Include="classeAuthentification.cs" />
-    <Compile Include="classeProduit.cs" />
     <Compile Include="DAOAuthentification.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="frm_Application.cs">
