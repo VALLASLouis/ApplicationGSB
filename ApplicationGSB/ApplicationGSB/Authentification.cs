@@ -33,41 +33,24 @@ namespace ApplicationGSB
         #region Fonction
         public Boolean verifCompte (String unLogin, String unPassword)
         {
-            try
+            bool montest = false;
+            List<classeAuthentification> lesComptes = new List<classeAuthentification>();
+            lesComptes = DAOA.getAllCompte();
+            for (int i = 0 ; i < lesComptes.Count() ; i++)
             {
-                bool montest = false;
-                List<classeAuthentification> lesComptes = new List<classeAuthentification>();
-                lesComptes = DAOA.getAllCompte();
-                for (int i = 0; i < lesComptes.Count; i++)
+                if (lesComptes[i].Login == unLogin && lesComptes[i].Password == unPassword)
                 {
-                    if (lesComptes[i].Login == unLogin && lesComptes[i].Password == unPassword)
-                    {
-                        montest = true;                      
-                    }
+                    montest = true;
                 }
-                return montest;
             }
-           catch (Exception e)
-            {
-                MessageBox.Show(e.ToString());
-                return false;
-            }
-            
+            return montest;
         }
         #endregion
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            if(verifCompte(txtbLogin.Text, txtbPassword.Text)){
-                lblMsgErreurAuth.Text = "Connexion validée";
-                frmAuthentification formAuth = new frmAuthentification();
-                formAuth.Hide();
-                frm_Application formApp = new frm_Application();
-                formApp.Show();
-            }
-            else
-            {
-                lblMsgErreurAuth.Text = "Connexion refusée, pour créer un nouveau compte, veuillez vous adressez à l'administrateur.";
+            if(verifCompte(txtbLogin.ToString(), txtbPassword.ToString())){
+                //A CONTINUER 
             }
         }
     }

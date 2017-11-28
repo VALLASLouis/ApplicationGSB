@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ApplicationGSB
 {
-    class classeVisiteursMedicaux
+    class VisiteursMedicaux
     {
         #region Propriétés
-        private String nomVisiteurs;
+        private String nomVisiteur;
         private String code;
         private String ville;
         private String dateNaissance;
@@ -18,11 +18,11 @@ namespace ApplicationGSB
         #endregion
 
         #region Accesseurs
-        public string NomVisiteurs
+        public string NomVisiteur
         {
             get
             {
-                return nomVisiteurs;
+                return nomVisiteur;
             }
         }
 
@@ -51,7 +51,7 @@ namespace ApplicationGSB
             }
         }
 
-        public string CP1
+        public int CP1
         {
             get
             {
@@ -67,5 +67,15 @@ namespace ApplicationGSB
             }
         }
         #endregion
+
+        public VisiteursMedicaux(String unNomVisiteur, String unCode, String uneVille, String uneDateNaissance, int unCP, String unNomSecteur)
+        {
+            nomVisiteur = unNomVisiteur;
+            code = unCode;
+            ville = uneVille;
+            dateNaissance = uneDateNaissance;
+            CP = unCP;
+            nomSecteur = unNomSecteur;
+        }
     }
 }

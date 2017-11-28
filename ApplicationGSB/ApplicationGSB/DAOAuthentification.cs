@@ -9,26 +9,23 @@ namespace ApplicationGSB
 {
     class DAOAuthentification
     {
-       
-        public List<classeAuthentification> getAllCompte ()
+        public List<Auth> getAllCompte ()
         {
-            List<classeAuthentification> resultat = new List<classeAuthentification>();
+            List<Auth> resultat = new List<Auth>();
             try
             {
-                DAOFactory DAOA = new DAOFactory();
-                DAOA.connexion();
-                String requete = "select * from Authentification;";
-                SqlDataReader DR = DAOA.execRead(requete);
-                while (DR.Read())
+                String requete = "select * from Authentification";
+                DAOFactory db = new DAOFactory();
+                SqlDataReader DR = db.execRead(requete);
+                while (DR.NextResult())
                 {
-                    resultat.Add(new classeAuthentification(DR.GetString(1), DR.GetString(2)));
+                    resultat.Add(new Auth(DR.GetString(0), DR.GetString(1)));
                 }
-                DAOA.deconnexion();
                 return resultat;
             }
-            catch(Exception e) 
+            catch(Exception)
             {
-                throw new Exception("Ne marche pas");
+                return null;
             }
         }
     }

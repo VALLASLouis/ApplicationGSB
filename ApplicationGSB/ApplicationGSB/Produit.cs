@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationGSB
 {
-    class classeProduit
+    class Produit
     {
         #region Propriétés
 
@@ -87,5 +87,17 @@ namespace ApplicationGSB
         }
 
         #endregion
+
+        public Produit(String unEffetTherapeutique, String unNomProduit, String uneContreIndication, String unDosage, String unePresentation, String unNomFamille, float unPxVenteHT, float unPxEchantillon)
+        {
+            effetTherapeutique = unEffetTherapeutique;
+            nomProduit = unNomProduit;
+            contreIndication = uneContreIndication;
+            dosage = unDosage;
+            presentation = unePresentation;
+            nomFamille = unNomFamille;
+            pxVenteHT = unPxVenteHT;
+            pxEchantillon = unPxEchantillon;
+        }
     }
 }

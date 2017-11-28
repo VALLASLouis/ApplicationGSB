@@ -52,10 +52,10 @@
     <Compile Include="Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
-    <Compile Include="classeAuthentification.cs" />
-    <Compile Include="classePraticiens.cs" />
-    <Compile Include="classeProduit.cs" />
-    <Compile Include="classeVisiteursMedicaux.cs" />
+    <Compile Include="Auth.cs" />
+    <Compile Include="Praticien.cs" />
+    <Compile Include="Produit.cs" />
+    <Compile Include="VisiteursMedicaux.cs" />
     <Compile Include="DAOAuthentification.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="frm_Application.cs">

@@ -37,25 +37,7 @@ namespace ApplicationGSB
 
         public SqlDataReader execRead(String requete)
         {
-                //Instancier la requête
-                maRequete = new SqlCommand();
-                maRequete.CommandText = requete;
-                maRequete.Connection = maConnexion;
-
-                // Formater la requête SQL pour l'executer
-                monDataAdapter = new SqlDataAdapter();
-                monDataAdapter.SelectCommand = maRequete;
-
-
-                // On exécute la requête
-                monDR = maRequete.ExecuteReader();
-
-                // Retourne le DR
-                return monDR;
-        }
-
-        public void execWrite(String requete)
-        {
+            connexion();
             //Instancier la requête
             maRequete = new SqlCommand();
             maRequete.CommandText = requete;
@@ -68,6 +50,17 @@ namespace ApplicationGSB
 
             // On exécute la requête
             monDR = maRequete.ExecuteReader();
+
+            // On ferme la connexion
+            deconnexion();
+
+            // Retourne le DR
+            return monDR;
+        }
+
+        public void execWrite(String requete)
+        {
+
         }
 
     }
