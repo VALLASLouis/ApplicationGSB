@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ApplicationGSB
 {
@@ -60,7 +61,19 @@ namespace ApplicationGSB
 
         public void execWrite(String requete)
         {
-
+            try
+            {
+                maRequete = new SqlCommand();
+                maRequete.CommandText = requete;
+                maRequete.Connection = maConnexion;
+                monDataAdapter = new SqlDataAdapter();
+                monDataAdapter.SelectCommand = maRequete;
+                maRequete.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex);
+            }
         }
 
     }
