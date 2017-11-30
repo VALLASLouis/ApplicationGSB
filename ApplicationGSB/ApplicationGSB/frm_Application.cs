@@ -30,8 +30,8 @@ namespace ApplicationGSB
             try
             {
 
-                string requete = "INSERT INTO \"livre-LV\" (idProduit,effetTherapeutique,nomProduit,contreIndication,pxVenteHT,pxEchantillon,dosage,presentation,idFamille) "+
-                   + " VALUES ("txbIdProduit.Text + ","' + txbEffetsTherapeu + '","' + cbxMedicaments.Text + '","' + txtbContreInd.Text + '","' + txtbPxVenteHT.Text + '","' + txtbPxEchantillon.Text + '","' + txtbDosage.Text + '","' + txtbPresentation + '","' + txtbFamille.Text +'")";
+                string requete = "INSERT INTO \"livre-LV\" (idProduit,effetTherapeutique,nomProduit,contreIndication,pxVenteHT,pxEchantillon,dosage,presentation,idFamille)";
+                requete = requete + "VALUES ('" + txbIdProduit.Text + "','" + txbEffetsTherapeu + "','" + cbxMedicaments.Text + "','" + txtbContreInd.Text + "','" + txtbPxVenteHT.Text + "','" + txtbPxEchantillon.Text + "','" + txtbDosage.Text + "','" + txtbPresentation + "','" + txtbFamille.Text +"';'";
 
                 maCommand = new SqlCommand();
                 maCommand.CommandText = requete;
