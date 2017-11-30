@@ -13,25 +13,37 @@ namespace ApplicationGSB
         private String code;
         private String ville;
         private String dateNaissance;
-        private int CP;
-        private String nomSecteur;
+        private String CP;
+        private int idSecteur;
+
+       
         #endregion
 
         #region Accesseurs
-        public string NomVisiteur
+
+         public string NomVisiteur
         {
             get
             {
                 return nomVisiteur;
             }
-        }
 
+            set
+            {
+                nomVisiteur = value;
+            }
+        }
 
         public string Code
         {
             get
             {
                 return code;
+            }
+
+            set
+            {
+                code = value;
             }
         }
 
@@ -41,6 +53,11 @@ namespace ApplicationGSB
             {
                 return ville;
             }
+
+            set
+            {
+                ville = value;
+            }
         }
 
         public string DateNaissance
@@ -49,33 +66,50 @@ namespace ApplicationGSB
             {
                 return dateNaissance;
             }
-        }
 
-        public int CP1
-        {
-            get
+            set
             {
-                return CP1;
+                dateNaissance = value;
             }
         }
 
-        public string NomSecteur
+
+        public int IdSecteur
         {
             get
             {
-                return nomSecteur;
+                return idSecteur;
+            }
+
+            set
+            {
+                idSecteur = value;
             }
         }
+
+        public string CP1
+        {
+            get
+            {
+                return CP;
+            }
+
+            set
+            {
+                CP = value;
+            }
+        }
+
         #endregion
 
-        public VisiteursMedicaux(String unNomVisiteur, String unCode, String uneVille, String uneDateNaissance, int unCP, String unNomSecteur)
+        public VisiteursMedicaux(String unNomVisiteur, String unCode, String uneVille, String uneDateNaissance, int unIdSecteur, String unCP)
         {
-            nomVisiteur = unNomVisiteur;
-            code = unCode;
-            ville = uneVille;
-            dateNaissance = uneDateNaissance;
+            NomVisiteur = unNomVisiteur;
+            Code = unCode;
+            Ville = uneVille;
+            DateNaissance = uneDateNaissance;
             CP = unCP;
-            nomSecteur = unNomSecteur;
+            IdSecteur = unIdSecteur;
         }
     }
 }

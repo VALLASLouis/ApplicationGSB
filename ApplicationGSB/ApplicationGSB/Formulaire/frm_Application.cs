@@ -14,6 +14,7 @@ namespace ApplicationGSB
     {
         #region Variables Globales
         DAOFactory DAOF = new DAOFactory();
+        DAOVisiteursMedicaux DAOVM = new DAOVisiteursMedicaux();
         #endregion
         public frm_Application()
         {
@@ -27,6 +28,19 @@ namespace ApplicationGSB
             requete = requete + "VALUES ('"+ txbEffetsTherapeu.Text + "','" + cbxMedicaments.Text + "','" + txtbContreInd.Text + "','" + float.Parse(txtbPxVenteHT.Text) + "','" + float.Parse(txtbPxEchantillon.Text) + "','" + txtbDosage.Text + "','" + txtbPresentation.Text + "','" + Int32.Parse(txtbFamille.Text) + "');";
             DAOF.execWrite(requete);
             DAOF.deconnexion();
+        }
+
+        private void btnCreerVisiteur_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabVisiteursMedicaux_Enter(object sender, EventArgs e)
+        {
+            List<VisiteursMedicaux> lesVisiteursMedicaux = new List<VisiteursMedicaux>();
+            lesVisiteursMedicaux = DAOVM.getAllVisiteursMedicaux();
+            dgvVisiteurMedical.DataSource = lesVisiteursMedicaux;
+            dgvVisiteurMedical.AutoResizeColumns();
         }
     }
 }

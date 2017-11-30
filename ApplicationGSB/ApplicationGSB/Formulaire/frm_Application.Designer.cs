@@ -30,6 +30,7 @@
         {
             this.tabApplication = new System.Windows.Forms.TabControl();
             this.tabMedicament = new System.Windows.Forms.TabPage();
+            this.lblNumProd = new System.Windows.Forms.Label();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnCreer = new System.Windows.Forms.Button();
@@ -54,6 +55,9 @@
             this.lblMedicaments = new System.Windows.Forms.Label();
             this.cbxMedicaments = new System.Windows.Forms.ComboBox();
             this.tabPraticiens = new System.Windows.Forms.TabPage();
+            this.btnSupprimerPraticien = new System.Windows.Forms.Button();
+            this.btnModifierPraticien = new System.Windows.Forms.Button();
+            this.btnCreerPraticien = new System.Windows.Forms.Button();
             this.dgvPraticiens = new System.Windows.Forms.DataGridView();
             this.dgvCodePraticien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRaisonSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,19 +76,17 @@
             this.lblSpecialite = new System.Windows.Forms.Label();
             this.cbxSpecialite = new System.Windows.Forms.ComboBox();
             this.tabVisiteursMedicaux = new System.Windows.Forms.TabPage();
+            this.btnSupprimerVisiteur = new System.Windows.Forms.Button();
+            this.btnModifierVisiteur = new System.Windows.Forms.Button();
+            this.btnCreerVisiteur = new System.Windows.Forms.Button();
             this.dgvVisiteurMedical = new System.Windows.Forms.DataGridView();
-            this.dgvNomVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCodeVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCPVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVilleVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDateNaissanceVisiteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbCodeVisiteur = new System.Windows.Forms.TextBox();
             this.txtbNomVisiteur = new System.Windows.Forms.TextBox();
             this.cmbxSecteurMedical = new System.Windows.Forms.ComboBox();
             this.lblCodeVisiteur = new System.Windows.Forms.Label();
             this.lblNomVisiteur = new System.Windows.Forms.Label();
             this.lblSecteurMedical = new System.Windows.Forms.Label();
-            this.lblNumProd = new System.Windows.Forms.Label();
+            this.btnChercherVisiteur = new System.Windows.Forms.Button();
             this.tabApplication.SuspendLayout();
             this.tabMedicament.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicaments)).BeginInit();
@@ -136,6 +138,14 @@
             this.tabMedicament.TabIndex = 0;
             this.tabMedicament.Text = "Médicaments";
             this.tabMedicament.UseVisualStyleBackColor = true;
+            // 
+            // lblNumProd
+            // 
+            this.lblNumProd.AutoSize = true;
+            this.lblNumProd.Location = new System.Drawing.Point(109, 72);
+            this.lblNumProd.Name = "lblNumProd";
+            this.lblNumProd.Size = new System.Drawing.Size(0, 13);
+            this.lblNumProd.TabIndex = 22;
             // 
             // btnSupprimer
             // 
@@ -327,6 +337,9 @@
             // 
             // tabPraticiens
             // 
+            this.tabPraticiens.Controls.Add(this.btnSupprimerPraticien);
+            this.tabPraticiens.Controls.Add(this.btnModifierPraticien);
+            this.tabPraticiens.Controls.Add(this.btnCreerPraticien);
             this.tabPraticiens.Controls.Add(this.dgvPraticiens);
             this.tabPraticiens.Controls.Add(this.txtbCodePraticien);
             this.tabPraticiens.Controls.Add(this.txtbNomPraticien);
@@ -341,6 +354,33 @@
             this.tabPraticiens.TabIndex = 1;
             this.tabPraticiens.Text = "Praticiens";
             this.tabPraticiens.UseVisualStyleBackColor = true;
+            // 
+            // btnSupprimerPraticien
+            // 
+            this.btnSupprimerPraticien.Location = new System.Drawing.Point(734, 110);
+            this.btnSupprimerPraticien.Name = "btnSupprimerPraticien";
+            this.btnSupprimerPraticien.Size = new System.Drawing.Size(107, 21);
+            this.btnSupprimerPraticien.TabIndex = 9;
+            this.btnSupprimerPraticien.Text = "Supprimer";
+            this.btnSupprimerPraticien.UseVisualStyleBackColor = true;
+            // 
+            // btnModifierPraticien
+            // 
+            this.btnModifierPraticien.Location = new System.Drawing.Point(734, 67);
+            this.btnModifierPraticien.Name = "btnModifierPraticien";
+            this.btnModifierPraticien.Size = new System.Drawing.Size(107, 21);
+            this.btnModifierPraticien.TabIndex = 8;
+            this.btnModifierPraticien.Text = "Modifier";
+            this.btnModifierPraticien.UseVisualStyleBackColor = true;
+            // 
+            // btnCreerPraticien
+            // 
+            this.btnCreerPraticien.Location = new System.Drawing.Point(734, 28);
+            this.btnCreerPraticien.Name = "btnCreerPraticien";
+            this.btnCreerPraticien.Size = new System.Drawing.Size(107, 21);
+            this.btnCreerPraticien.TabIndex = 7;
+            this.btnCreerPraticien.Text = "Créer";
+            this.btnCreerPraticien.UseVisualStyleBackColor = true;
             // 
             // dgvPraticiens
             // 
@@ -463,6 +503,10 @@
             // 
             // tabVisiteursMedicaux
             // 
+            this.tabVisiteursMedicaux.Controls.Add(this.btnChercherVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.btnSupprimerVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.btnModifierVisiteur);
+            this.tabVisiteursMedicaux.Controls.Add(this.btnCreerVisiteur);
             this.tabVisiteursMedicaux.Controls.Add(this.dgvVisiteurMedical);
             this.tabVisiteursMedicaux.Controls.Add(this.txtbCodeVisiteur);
             this.tabVisiteursMedicaux.Controls.Add(this.txtbNomVisiteur);
@@ -477,46 +521,44 @@
             this.tabVisiteursMedicaux.TabIndex = 2;
             this.tabVisiteursMedicaux.Text = "Visiteurs médicaux";
             this.tabVisiteursMedicaux.UseVisualStyleBackColor = true;
+            this.tabVisiteursMedicaux.Enter += new System.EventHandler(this.tabVisiteursMedicaux_Enter);
+            // 
+            // btnSupprimerVisiteur
+            // 
+            this.btnSupprimerVisiteur.Location = new System.Drawing.Point(734, 112);
+            this.btnSupprimerVisiteur.Name = "btnSupprimerVisiteur";
+            this.btnSupprimerVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.btnSupprimerVisiteur.TabIndex = 9;
+            this.btnSupprimerVisiteur.Text = "Supprimer";
+            this.btnSupprimerVisiteur.UseVisualStyleBackColor = true;
+            // 
+            // btnModifierVisiteur
+            // 
+            this.btnModifierVisiteur.Location = new System.Drawing.Point(734, 71);
+            this.btnModifierVisiteur.Name = "btnModifierVisiteur";
+            this.btnModifierVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.btnModifierVisiteur.TabIndex = 8;
+            this.btnModifierVisiteur.Text = "Modifier";
+            this.btnModifierVisiteur.UseVisualStyleBackColor = true;
+            // 
+            // btnCreerVisiteur
+            // 
+            this.btnCreerVisiteur.Location = new System.Drawing.Point(734, 24);
+            this.btnCreerVisiteur.Name = "btnCreerVisiteur";
+            this.btnCreerVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.btnCreerVisiteur.TabIndex = 7;
+            this.btnCreerVisiteur.Text = "Créer";
+            this.btnCreerVisiteur.UseVisualStyleBackColor = true;
+            this.btnCreerVisiteur.Click += new System.EventHandler(this.btnCreerVisiteur_Click);
             // 
             // dgvVisiteurMedical
             // 
             this.dgvVisiteurMedical.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVisiteurMedical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisiteurMedical.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvNomVisiteur,
-            this.dgvCodeVisiteur,
-            this.dgvCPVisiteur,
-            this.dgvVilleVisiteur,
-            this.dgvDateNaissanceVisiteur});
             this.dgvVisiteurMedical.Location = new System.Drawing.Point(8, 164);
             this.dgvVisiteurMedical.Name = "dgvVisiteurMedical";
             this.dgvVisiteurMedical.Size = new System.Drawing.Size(882, 252);
             this.dgvVisiteurMedical.TabIndex = 6;
-            // 
-            // dgvNomVisiteur
-            // 
-            this.dgvNomVisiteur.HeaderText = "Nom";
-            this.dgvNomVisiteur.Name = "dgvNomVisiteur";
-            // 
-            // dgvCodeVisiteur
-            // 
-            this.dgvCodeVisiteur.HeaderText = "Code";
-            this.dgvCodeVisiteur.Name = "dgvCodeVisiteur";
-            // 
-            // dgvCPVisiteur
-            // 
-            this.dgvCPVisiteur.HeaderText = "Code postal";
-            this.dgvCPVisiteur.Name = "dgvCPVisiteur";
-            // 
-            // dgvVilleVisiteur
-            // 
-            this.dgvVilleVisiteur.HeaderText = "Ville";
-            this.dgvVilleVisiteur.Name = "dgvVilleVisiteur";
-            // 
-            // dgvDateNaissanceVisiteur
-            // 
-            this.dgvDateNaissanceVisiteur.HeaderText = "Date naissance";
-            this.dgvDateNaissanceVisiteur.Name = "dgvDateNaissanceVisiteur";
             // 
             // txtbCodeVisiteur
             // 
@@ -567,13 +609,14 @@
             this.lblSecteurMedical.TabIndex = 0;
             this.lblSecteurMedical.Text = "Secteur médical :";
             // 
-            // lblNumProd
+            // btnChercherVisiteur
             // 
-            this.lblNumProd.AutoSize = true;
-            this.lblNumProd.Location = new System.Drawing.Point(109, 72);
-            this.lblNumProd.Name = "lblNumProd";
-            this.lblNumProd.Size = new System.Drawing.Size(0, 13);
-            this.lblNumProd.TabIndex = 22;
+            this.btnChercherVisiteur.Location = new System.Drawing.Point(619, 71);
+            this.btnChercherVisiteur.Name = "btnChercherVisiteur";
+            this.btnChercherVisiteur.Size = new System.Drawing.Size(100, 20);
+            this.btnChercherVisiteur.TabIndex = 10;
+            this.btnChercherVisiteur.Text = "Chercher";
+            this.btnChercherVisiteur.UseVisualStyleBackColor = true;
             // 
             // frm_Application
             // 
@@ -648,13 +691,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClientPraticien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCoefConfiancePraticien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCoefNotorietePraticien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvNomVisiteur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCodeVisiteur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCPVisiteur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvVilleVisiteur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDateNaissanceVisiteur;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvInteractionMedicament;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvInstruction;
         private System.Windows.Forms.Label lblNumProd;
+        private System.Windows.Forms.Button btnSupprimerPraticien;
+        private System.Windows.Forms.Button btnModifierPraticien;
+        private System.Windows.Forms.Button btnCreerPraticien;
+        private System.Windows.Forms.Button btnSupprimerVisiteur;
+        private System.Windows.Forms.Button btnModifierVisiteur;
+        private System.Windows.Forms.Button btnCreerVisiteur;
+        private System.Windows.Forms.Button btnChercherVisiteur;
     }
 }

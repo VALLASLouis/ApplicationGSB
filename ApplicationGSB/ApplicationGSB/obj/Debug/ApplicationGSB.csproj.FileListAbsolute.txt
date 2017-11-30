@@ -52,3 +52,13 @@ F:\COURS\A2\SLAM4-5\PPE\ApplicationGSB\App\ApplicationGSB\ApplicationGSB\Applica
 F:\COURS\A2\SLAM4-5\PPE\ApplicationGSB\App\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.frm_Application.resources
 F:\COURS\A2\SLAM4-5\PPE\ApplicationGSB\App\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.Properties.Resources.resources
 F:\COURS\A2\SLAM4-5\PPE\ApplicationGSB\App\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.csproj.GenerateResource.Cache
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\bin\Debug\ApplicationGSB.exe.config
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.exe
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.pdb
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\bin\Debug\ApplicationGSB.exe
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\bin\Debug\ApplicationGSB.pdb
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.csprojResolveAssemblyReference.cache
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.frmAuthentification.resources
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.frm_Application.resources
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.Properties.Resources.resources
+F:\ICOF\A2\PPE-SLAM-APPLI\Projet travail\ApplicationGSB\ApplicationGSB\ApplicationGSB\obj\Debug\ApplicationGSB.csproj.GenerateResource.Cache

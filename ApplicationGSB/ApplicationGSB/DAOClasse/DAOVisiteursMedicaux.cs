@@ -14,14 +14,16 @@ namespace ApplicationGSB
             List<VisiteursMedicaux> resultatVis = new List<VisiteursMedicaux>();
             try
             {
-                String req = "select * from VisiteursMedicaux";
-                DAOFactory db = new DAOFactory();
-                SqlDataReader DR = db.execRead(req);
-                while(DR.NextResult())
+                DAOFactory DAOF = new DAOFactory();
+                DAOF.connexion();
+                String req = "select * from visiteursMedicaux;";  
+                SqlDataReader DR = DAOF.execRead(req);
+                while(DR.Read())
                 {
-                    resultatVis.Add(new VisiteursMedicaux(DR.GetString(0), DR.GetString(1), DR.GetString(2),
-                        DR.GetString(3), DR.GetInt32(4), DR.GetString(5)));
+                    resultatVis.Add(new VisiteursMedicaux(DR.GetString(1), DR.GetString(2), DR.GetString(3),
+                        DR.GetString(4), DR.GetInt32(5), DR.GetString(6)));
                 }
+                DAOF.deconnexion();
                 return resultatVis;
             }
             catch (Exception)
