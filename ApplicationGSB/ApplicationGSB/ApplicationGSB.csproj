@@ -53,6 +53,9 @@
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
     <Compile Include="Auth.cs" />
+    <Compile Include="DAOPraticien.cs" />
+    <Compile Include="DAOProduit.cs" />
+    <Compile Include="DAOVisiteursMedicaux.cs" />
     <Compile Include="Praticien.cs" />
     <Compile Include="Produit.cs" />
     <Compile Include="VisiteursMedicaux.cs" />

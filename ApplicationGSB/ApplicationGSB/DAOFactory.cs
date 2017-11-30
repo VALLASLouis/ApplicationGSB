@@ -63,12 +63,14 @@ namespace ApplicationGSB
         {
             try
             {
+                connexion();
                 maRequete = new SqlCommand();
                 maRequete.CommandText = requete;
                 maRequete.Connection = maConnexion;
                 monDataAdapter = new SqlDataAdapter();
                 monDataAdapter.SelectCommand = maRequete;
                 maRequete.ExecuteReader();
+                deconnexion();
             }
             catch (Exception ex)
             {
