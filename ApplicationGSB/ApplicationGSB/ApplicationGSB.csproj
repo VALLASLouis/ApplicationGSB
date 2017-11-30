@@ -46,30 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentification.cs">
+    <Compile Include="Formulaire\Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authentification.Designer.cs">
+    <Compile Include="Formulaire\Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
-    <Compile Include="classeAuthentification.cs" />
-    <Compile Include="classePraticiens.cs" />
-    <Compile Include="classeProduit.cs" />
-    <Compile Include="classeVisiteursMedicaux.cs" />
-    <Compile Include="DAOAuthentification.cs" />
-    <Compile Include="DAOFactory.cs" />
-    <Compile Include="frm_Application.cs">
+    <Compile Include="Classe\Auth.cs" />
+    <Compile Include="DAOClasse\DAOPraticien.cs" />
+    <Compile Include="DAOClasse\DAOProduit.cs" />
+    <Compile Include="DAOClasse\DAOVisiteursMedicaux.cs" />
+    <Compile Include="Classe\Praticien.cs" />
+    <Compile Include="Classe\Produit.cs" />
+    <Compile Include="Classe\VisiteursMedicaux.cs" />
+    <Compile Include="DAOClasse\DAOAuthentification.cs" />
+    <Compile Include="DAOClasse\DAOFactory.cs" />
+    <Compile Include="Formulaire\frm_Application.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Application.Designer.cs">
+    <Compile Include="Formulaire\frm_Application.Designer.cs">
       <DependentUpon>frm_Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classe\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Authentification.resx">
+    <EmbeddedResource Include="Formulaire\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Application.resx">
+    <EmbeddedResource Include="Formulaire\frm_Application.resx">
       <DependentUpon>frm_Application.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
